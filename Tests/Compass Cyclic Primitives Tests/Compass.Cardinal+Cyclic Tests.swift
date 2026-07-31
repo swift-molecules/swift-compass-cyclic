@@ -5,6 +5,12 @@ import Testing
 
 @Suite
 struct `Compass.Cardinal Cyclic projection` {
+    @Suite struct Unit {}
+    @Suite struct `Edge Case` {}
+    @Suite struct Integration {}
+}
+
+extension `Compass.Cardinal Cyclic projection`.Unit {
     @Test
     func `projection round-trips`() {
         for cardinal in Compass.Cardinal.allCases {
