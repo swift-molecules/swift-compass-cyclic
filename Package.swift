@@ -3,7 +3,7 @@ import PackageDescription
 
 let package = Package(
     name: "swift-compass-cyclic-primitives",
-    platforms: [.macOS(.v26), .iOS(.v26), .tvOS(.v26), .watchOS(.v26), .visionOS(.v26)],
+    platforms: [.macOS("27"), .iOS("27"), .tvOS("27"), .watchOS("27"), .visionOS("27")],
     products: [
         .library(name: "Compass Cyclic Primitives", targets: ["Compass Cyclic Primitives"]),
         .library(name: "Compass Cyclic Primitives Test Support", targets: ["Compass Cyclic Primitives Test Support"]),
