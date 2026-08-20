@@ -3,7 +3,7 @@
 
 public import Compass_Primitives
 public import Cyclic_Primitives
-public import Ordinal_Primitives
+import Ordinal_Primitives
 
 extension Compass.Cardinal {
     /// This bearing as an element of the cyclic group `Cyclic.Group.Static<4>` (Z/4Z), in
