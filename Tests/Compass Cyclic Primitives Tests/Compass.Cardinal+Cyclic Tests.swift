@@ -1,5 +1,3 @@
-// Compass.Cardinal+Cyclic Tests.swift
-
 import Compass_Cyclic_Primitives
 import Testing
 
