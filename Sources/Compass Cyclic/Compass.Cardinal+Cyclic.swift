@@ -1,6 +1,6 @@
-public import Compass_Primitives
-public import Cyclic_Primitives
-import Ordinal_Primitives
+public import Compass
+public import Cyclic
+import Ordinal
 
 extension Compass.Cardinal {
 

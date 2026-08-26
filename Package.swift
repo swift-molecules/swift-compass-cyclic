@@ -2,46 +2,46 @@
 import PackageDescription
 
 let package = Package(
-    name: "swift-compass-cyclic-primitives",
+    name: "swift-compass-cyclic",
     platforms: [.macOS(.v27), .iOS(.v27), .tvOS(.v27), .watchOS(.v27), .visionOS(.v27)],
     products: [
-        .library(name: "Compass Cyclic Primitives", targets: ["Compass Cyclic Primitives"]),
+        .library(name: "Compass Cyclic", targets: ["Compass Cyclic"]),
         .library(
-            name: "Compass Cyclic Primitives Test Support",
-            targets: ["Compass Cyclic Primitives Test Support"]
+            name: "Compass Cyclic Test Support",
+            targets: ["Compass Cyclic Test Support"]
         ),
     ],
     dependencies: [
         .package(
-            url: "https://github.com/swift-primitives/swift-compass-primitives.git",
+            url: "https://github.com/swift-molecules/swift-compass.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-primitives/swift-cyclic-primitives.git",
+            url: "https://github.com/swift-molecules/swift-cyclic.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-primitives/swift-ordinal-primitives.git",
+            url: "https://github.com/swift-molecules/swift-ordinal.git",
             branch: "main"
         ),
     ],
     targets: [
         .target(
-            name: "Compass Cyclic Primitives",
+            name: "Compass Cyclic",
             dependencies: [
-                .product(name: "Compass Primitives", package: "swift-compass-primitives"),
-                .product(name: "Cyclic Primitives", package: "swift-cyclic-primitives"),
-                .product(name: "Ordinal Primitives", package: "swift-ordinal-primitives"),
+                .product(name: "Compass", package: "swift-compass"),
+                .product(name: "Cyclic", package: "swift-cyclic"),
+                .product(name: "Ordinal", package: "swift-ordinal"),
             ]
         ),
         .target(
-            name: "Compass Cyclic Primitives Test Support",
-            dependencies: ["Compass Cyclic Primitives"],
+            name: "Compass Cyclic Test Support",
+            dependencies: ["Compass Cyclic"],
             path: "Tests/Support"
         ),
         .testTarget(
-            name: "Compass Cyclic Primitives Tests",
-            dependencies: ["Compass Cyclic Primitives", "Compass Cyclic Primitives Test Support"]
+            name: "Compass Cyclic Tests",
+            dependencies: ["Compass Cyclic", "Compass Cyclic Test Support"]
         ),
     ],
     swiftLanguageModes: [.v6]
